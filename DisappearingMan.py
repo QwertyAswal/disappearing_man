@@ -41,14 +41,13 @@ while ct < 3:
 while wrongGuess < 8 and rem < org.__len__():
     inp = displayAndInput()
     flt = 0
+    guess += 1
     for i in range(0, org.__len__()):
         temp = "" + org[i]
         if temp.lower() == inp and show[i] == '_':
-            guess += 1
             show[i] = org[i]
             rem += 1
             flt = 1
-            break
     if flt == 0:
         wrongGuess += 1
         man = man[:-1]
