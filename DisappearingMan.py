@@ -20,8 +20,8 @@ def displayAndInput():
     print("\n")
     print("*---------------------------*")
     return ch1
-
-
+semp=17
+#actual code starts from here
 org = tuple(random.choice(wordLibrary))
 rem = 0;
 for i in range(len(org)):
