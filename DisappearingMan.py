@@ -4,10 +4,14 @@ man = [" ___ \n", "(o^", "o)\n", "--", "|", "--\n", " / ", "\ \n"]
 guess = 0
 wrongGuess = 0
 show = []
-wordLibrary = ["Vikram Vedha", "Taare Zameen Par", "Andhadhun", "Bhaag Milkha Bhaag", "Jo Jeeta Wohi Sikandar",
-               "Paan Singh Tomar", "Rang De Basanti", "Gangs of Wasseypur", "A Wednesday", "Dil Chahta Hai",
-               "Zindagi Na Milegi Dobara", "Lage Raho Munna Bhai", "Baahubali", "Bajrangi Bhaijaan", "Gangaajal"]
 
+
+wordLibrary = []
+
+with open("movies.txt") as f:
+    for line in f.readlines():
+        movie_name = line.strip()
+        wordLibrary.append(movie_name)
 
 def displayAndInput():
     print(*man, sep='')
